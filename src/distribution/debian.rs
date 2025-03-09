@@ -118,6 +118,15 @@ pub fn get_bootloader_packages(os_release: &OsRelease) -> io::Result<&'static [&
             "mokutil",
             "shim-signed",
         ]),
+        ("DriftOS", _, "x86_64", Bootloader::Efi) => Ok(&[
+            "efibootmgr",
+            "fwupd-signed",
+            "grub-efi-amd64",
+            "grub-efi-amd64-signed",
+            "linux-image-generic",
+            "mokutil",
+            "shim-signed",
+        ]),
         ("elementary OS", _, "x86_64", Bootloader::Efi) => {
             Ok(&["grub-efi-amd64", "grub-efi-amd64-signed", "mokutil", "shim-signed"])
         }
